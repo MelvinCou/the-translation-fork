@@ -21,9 +21,10 @@ jobs:
       
       - name: Install packages
         run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends chromium-browser lmodern pandoc texlive-fonts-recommended texlive-latex-extra texlive-latex-recommended texlive-pictures
           sudo npm i -g mermaid-filter
+          node /usr/local/lib/node_modules/mermaid-filter/node_modules/puppeteer/install.js
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends lmodern pandoc texlive-fonts-recommended texlive-latex-extra texlive-latex-recommended texlive-pictures
       
       - name: Convert all md from wiki folder to pdf
         run: |
