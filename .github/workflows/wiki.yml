@@ -22,7 +22,7 @@ jobs:
       - name: Install packages
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends lmodern pandoc texlive-fonts-recommended texlive-latex-extra texlive-latex-recommended texlive-pictures
+          sudo apt-get install -y --no-install-recommends chromium-browser lmodern pandoc texlive-fonts-recommended texlive-latex-extra texlive-latex-recommended texlive-pictures
           sudo npm i -g mermaid-filter
       
       - name: Convert all md from wiki folder to pdf
