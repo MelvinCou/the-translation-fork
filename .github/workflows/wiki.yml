@@ -13,6 +13,10 @@ jobs:
         with:
           submodules: true
           token: ${{ secrets.PAT }}
+
+      - name: Update wiki
+        run: git pull
+        working-directory: wiki
       
       - name: Install packages
         run: |
