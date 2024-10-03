@@ -28,7 +28,7 @@ jobs:
       
       - name: Convert all md from wiki folder to pdf
         run: |
-          export CHROME_BIN=$(which chromium)
+          export PUPPETEER_EXECUTABLE_PATH=$(which chromium)
           mkdir -p $HOME/.cache/puppeteer
           find wiki -name "*.md" -exec pandoc -F mermaid-filter -f markdown -t latex -o {}.pdf {} \;
           mv wiki/*.pdf docs
